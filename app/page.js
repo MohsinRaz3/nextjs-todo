@@ -1,12 +1,12 @@
-import AddTodo from './addTodo'
-import TodoListing from './todoListing'
+import AddTodo from "./addTodo";
+import TodoListing from "./todoListing";
 
-export default function Page(){
+export default function Page() {
   return (
     //Input Button
     <div>
- <AddTodo/> 
-  <TodoListing/>     
+      <AddTodo />
+      <TodoListing />
     </div>
-  )
+  );
 }

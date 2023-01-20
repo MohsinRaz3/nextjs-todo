@@ -4,10 +4,10 @@
 // onChange function || onClick function
 
 import { useRouter } from "next/navigation";
+
 async function update(id, isDone, refresh) {
-  await fetch(`http://localhost:3001/api/todo/update`, {
+  await fetch(`http://localhost:3002/api/todo/update`, {
     method: "POST",
-    mode: "no-cors",
     body: JSON.stringify({ id, isDone }),
   });
   refresh();

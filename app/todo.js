@@ -6,7 +6,7 @@
 import { useRouter } from "next/navigation";
 
 async function update(id, isDone, refresh) {
-  await fetch(`http://localhost:3002/api/todo/update`, {
+  await fetch(`http://localhost:3001/api/todo/update`, {
     method: "POST",
     body: JSON.stringify({ id, isDone }),
   });
@@ -23,15 +23,24 @@ async function deleteTodo(id, refresh) {
 export default function Todo({ todo }) {
   const router = useRouter();
   return (
-    <div>
+    <div style={{ margin: "0 0 0 5rem" }}>
       <input
+        style={{ margin: " 0 2rem 0 0" }}
         type="checkbox"
         checked={todo.isDone}
         onChange={(e) => update(todo.id, e.target.checked, router.refresh)}
       />
 
       {todo.name}
-      <button onClick={() => deleteTodo(todo.id, router.refresh)}>
+      <button
+        style={{
+          border: "0.5px solid ",
+          margin: "0 0 0 2rem",
+          background: "grey",
+          color: "orange",
+        }}
+        onClick={() => deleteTodo(todo.id, router.refresh)}
+      >
         Delete
       </button>
     </div>

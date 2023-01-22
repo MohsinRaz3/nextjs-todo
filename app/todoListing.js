@@ -8,14 +8,11 @@ export default async function TodoListing() {
   const { todos } = await getTodos();
   console.log(todos);
   return (
-    <div style={{ display: "block", margin: "auto", width: "50%" }}>
-      <ul style={{ listStyleType: "none", padding: 15 }}>
+    <div>
+      <ul>
         {todos.map((t) => {
           return (
-            <li
-              key={t.id}
-              style={{ padding: "15px 0", display: "flex", background: "pink" }}
-            >
+            <li key={t.id}>
               <Todo todo={t} />
             </li>
           );

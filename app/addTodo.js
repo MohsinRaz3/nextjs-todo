@@ -1,11 +1,6 @@
 "use client";
-import {
-  ChakraProvider,
-  Heading,
-  Container,
-  Button,
-  Input,
-} from "@chakra-ui/react";
+import style from "../styles/page.module.css";
+
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -21,35 +16,22 @@ export default function AddNewTodo() {
   const router = useRouter();
   let [name, setName] = useState("");
   return (
-    <ChakraProvider>
-      <Container
-        w="100%"
-        h="200px"
-        bgGradient="linear(red.100 0%, orange.100 25%, yellow.100 50%)"
+    <div className={style.addTodo}>
+      <h1 className={style.heading}>TODO-LIST CHAKRA-UI</h1>
+      <input
+        type="text"
+        placeholder="Add Todo Here"
+        onChange={(e) => setName(e.target.value)}
+        value={name}
+      />
+      <button
+        onClick={async () => {
+          await addTodo(name, router.refresh);
+          setName("");
+        }}
       >
-        <Heading my="40px" py="25px">
-          TODO-LIST CHAKRA-UI
-        </Heading>
-        <Input
-          type="text"
-          variant="filled"
-          htmlSize={26}
-          width="auto"
-          placeholder="Add Todo Here"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-        <Button
-          colorScheme="teal"
-          size="sm"
-          onClick={async () => {
-            await addTodo(name, router.refresh);
-            setName("");
-          }}
-        >
-          Add
-        </Button>
-      </Container>
-    </ChakraProvider>
+        Add
+      </button>
+    </div>
   );
 }

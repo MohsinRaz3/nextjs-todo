@@ -1,0 +1,59 @@
+/* addTodo styling */
+
+.container{
+    width: 50%;
+    margin: 5rem auto;
+}
+.addTodo input{
+    font-size: 22px;
+    border-radius: 3px;
+    border: none;
+     margin: 3rem 0;
+     outline: none;    
+     padding: .3rem;
+     width: 75%;
+
+}
+.addTodo button{
+    font-size: 22px;
+    margin-left: 1rem;
+    background-color:rgb(61, 163, 252) ;
+    color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s all ease;
+    padding: .5rem 1rem;
+}
+.addTodo button:hover{
+    background-color:rgb(17, 82, 139) ;
+
+}
+
+/* todo listing styling */
+
+.todoListing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.todoListing input{
+height: 1rem;
+width: 1rem;
+}
+.todoListing button{
+    background-color: rgb(61, 163, 252);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: .5rem 1rem;
+    transition: .3s all ease-in;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    .todoListing button:hover{
+        background-color: rgb(90, 84, 172);
+
+    }

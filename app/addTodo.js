@@ -17,7 +17,7 @@ export default function AddNewTodo() {
   let [name, setName] = useState("");
   return (
     <div className={style.addTodo}>
-      <h1 className={style.heading}>TODO-LIST CHAKRA-UI</h1>
+      <h1 className={style.heading}>TODO-LIST </h1>
       <input
         type="text"
         placeholder="Add Todo Here"

@@ -1,4 +1,4 @@
-/* addTodo styling */
+/* addTodo styling
 
 .container{
     width: 50%;
@@ -31,7 +31,7 @@
 }
 
 /* todo listing styling */
-
+/* 
 .todoListing {
     display: flex;
     flex-wrap: wrap;
@@ -56,4 +56,4 @@ width: 1rem;
     .todoListing button:hover{
         background-color: rgb(90, 84, 172);
 
-    }
+    } */ 

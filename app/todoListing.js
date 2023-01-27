@@ -9,10 +9,10 @@ export default async function TodoListing() {
   console.log(todos);
   return (
     <div>
-      <ul>
+      <ul className="bg-emerald-200 rounded-md flex-auto">
         {todos.map((t) => {
           return (
-            <li key={t.id}>
+            <li className="mx-3 py-1" key={t.id}>
               <Todo todo={t} />
             </li>
           );

@@ -5,8 +5,6 @@
 // onChange function || onClick function
 
 import { useRouter } from "next/navigation";
-import style from "../styles/page.module.css";
-
 async function update(id, isDone, refresh) {
   await fetch(`http://localhost:3001/api/todo/update`, {
     method: "POST",
@@ -25,7 +23,7 @@ async function deleteTodo(id, refresh) {
 export default function Todo({ todo }) {
   const router = useRouter();
   return (
-    <div className={style.todoListing}>
+    <div>
       <input
         type="checkbox"
         checked={todo.isDone}
@@ -33,7 +31,10 @@ export default function Todo({ todo }) {
       />
 
       {todo.name}
-      <button onClick={() => deleteTodo(todo.id, router.refresh)}>
+      <button
+        className="mx-2 bg-emerald-500 px-3 mb-2 rounded-md"
+        onClick={() => deleteTodo(todo.id, router.refresh)}
+      >
         Delete
       </button>
     </div>

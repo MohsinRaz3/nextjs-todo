@@ -3,7 +3,9 @@ export default function RootLayout({ children }) {
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body className="  bg-emerald-400 min-h-screen">
+        <div>{children}</div>
+      </body>
     </html>
   );
 }

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 async function addTodo(name, refresh) {
-  await fetch(`/api/todo/add`, {
+  await fetch(`https://todo-mock-api.vercel.app/api/todo/add`, {
     method: "POST",
     body: JSON.stringify({ name }),
   });

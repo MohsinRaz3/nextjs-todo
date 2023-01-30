@@ -6,7 +6,7 @@
 
 import { useRouter } from "next/navigation";
 async function update(id, isDone, refresh) {
-  await fetch(`http://localhost:3001/api/todo/update`, {
+  await fetch(`https://todo-mock-api.vercel.app/api/todo/update`, {
     method: "POST",
     body: JSON.stringify({ id, isDone }),
   });
